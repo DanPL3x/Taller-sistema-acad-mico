@@ -1,19 +1,21 @@
 package com.uniajc.taller;
 
-import java.sql.Connection;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-import com.uniajc.taller.modelo.Conexion;
+public class Main extends Application {
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/login.fxml"));
+        Scene scene = new Scene(loader.load());
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Sistema Control Académico");
+        primaryStage.show();
+    }
 
-public class Main {
     public static void main(String[] args) {
-        Connection con = Conexion.getConexion();
-
-        if (con != null) {
-            System.out.println("Conexión a MySQL establecida correctamente ");
-        } else {
-            System.out.println("Error al conectar con la base de datos ");
-        }
-
-        Conexion.cerrarConexion();
+        launch(args);
     }
 }
