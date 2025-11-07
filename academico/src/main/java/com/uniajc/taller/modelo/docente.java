@@ -1,51 +1,33 @@
 package com.uniajc.taller.modelo;
 
 public class docente {
+    private int id;
+    private String nombre;
 
-    private int docenteId;
-    private String nombreDocente;
-    private String identificacion;
-    private String tipoIdentificacion;
-    private String genero;
-    private String correo;
-    private String tituloEstudios;
-    private String idiomas;
-    private String certificaciones;
-
-    public docente() {}
-
-    public docente(int docenteId, String nombreDocente, String identificacion, String tipoIdentificacion,
-                   String genero, String correo, String tituloEstudios, String idiomas, String certificaciones) {
-        this.docenteId = docenteId;
-        this.nombreDocente = nombreDocente;
-        this.identificacion = identificacion;
-        this.tipoIdentificacion = tipoIdentificacion;
-        this.genero = genero;
-        this.correo = correo;
-        this.tituloEstudios = tituloEstudios;
-        this.idiomas = idiomas;
-        this.certificaciones = certificaciones;
+    public docente(int id, String nombre) { this.id = id; this.nombre = nombre; }
+    public int getId() { return id; }
+    public String getNombre() { return nombre; }
+    @Override public String toString() { return id + " - " + nombre; }
+    public String getIdentificacion() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getIdentificacion'");
     }
-
-    // Getters y Setters
-    public int getDocenteId() { return docenteId; }
-    public void setDocenteId(int docenteId) { this.docenteId = docenteId; }
-    public String getNombreDocente() { return nombreDocente; }
-    public void setNombreDocente(String nombreDocente) { this.nombreDocente = nombreDocente; }
-    public String getIdentificacion() { return identificacion; }
-    public void setIdentificacion(String identificacion) { this.identificacion = identificacion; }
-    public String getTipoIdentificacion() { return tipoIdentificacion; }
-    public void setTipoIdentificacion(String tipoIdentificacion) { this.tipoIdentificacion = tipoIdentificacion; }
-    public String getGenero() { return genero; }
-    public void setGenero(String genero) { this.genero = genero; }
-    public String getCorreo() { return correo; }
-    public void setCorreo(String correo) { this.correo = correo; }
-    public String getTituloEstudios() { return tituloEstudios; }
-    public void setTituloEstudios(String tituloEstudios) { this.tituloEstudios = tituloEstudios; }
-    public String getIdiomas() { return idiomas; }
-    public void setIdiomas(String idiomas) { this.idiomas = idiomas; }
-    public String getCertificaciones() { return certificaciones; }
-    public void setCertificaciones(String certificaciones) { this.certificaciones = certificaciones; }
+    public String getGenero() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getGenero'");
+    }
+    public String getCorreo() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getCorreo'");
+    }
+    public String getTituloEstudios() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getTituloEstudios'");
+    }
+    public String getCertificaciones() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getCertificaciones'");
+    }
 }
 
-    
+

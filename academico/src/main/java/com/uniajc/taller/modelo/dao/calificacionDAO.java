@@ -85,5 +85,20 @@ public ObservableList<calificaciones> listarCalificacionesPorEstudiante(int i) {
     throw new UnsupportedOperationException("Unimplemented method 'listarCalificacionesPorEstudiante'");
 }
 
+public ObservableList<calificaciones> listarCalificaciones() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'listarCalificaciones'");
+}
+
+public void insertarCalificacion(calificaciones c) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'insertarCalificacion'");
+}
+
+public void eliminarCalificacion(int calificacionId) {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'eliminarCalificacion'");
+}
+
     
 }

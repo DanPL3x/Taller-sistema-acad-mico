@@ -12,7 +12,7 @@ public class cursoDAO {
         try (Connection conn = Conexion.getConexion();
              PreparedStatement ps = conn.prepareStatement(sql)) {
 
-            ps.setString(1, c.getNombreCurso());
+            ps.setString(1, c.getNombre());
             ps.setInt(2, c.getPeriodoAcademicoId());
             ps.setInt(3, c.getDocenteId());
             ps.setString(4, c.getDescripcionCurso());
@@ -34,9 +34,7 @@ public class cursoDAO {
                 lista.add(new curso(
                         rs.getInt("curso_id"),
                         rs.getString("nombre_curso"),
-                        rs.getInt("periodo_academico_id"),
-                        rs.getInt("docente_id"),
-                        rs.getString("descripcion_curso")
+                        rs.getInt("periodo_academico_id")
                 ));
             }
         } catch (SQLException e) {
@@ -55,6 +53,11 @@ public class cursoDAO {
         } catch (SQLException e) {
             System.out.println("❌ Error al eliminar curso: " + e.getMessage());
         }
+    }
+
+    public void insertarCurso(curso c) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'insertarCurso'");
     }
 }
 

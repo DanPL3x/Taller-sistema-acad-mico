@@ -7,6 +7,8 @@ import java.time.LocalDate;
 
 public class asistenciaDAO {
 
+    private int cursoId;
+
     // ➕ Registrar asistencia
     public void registrarAsistencia(asistencia a) {
         String sql = "INSERT INTO asistencias (estudiante_id, curso_id, fecha_clase, estado_asistencia, novedades) VALUES (?, ?, ?, ?, ?)";
@@ -27,7 +29,7 @@ public class asistenciaDAO {
     }
 
     // 📋 Listar asistencias por curso
-    public ObservableList<asistencia> listarAsistenciasPorCurso(int cursoId) {
+    public ObservableList<asistencia> listarAsistenciasPorCurso() {
         ObservableList<asistencia> lista = FXCollections.observableArrayList();
         String sql = "SELECT * FROM asistencias WHERE curso_id=?";
         try (Connection conn = Conexion.getConexion();
@@ -78,6 +80,11 @@ public class asistenciaDAO {
         } catch (SQLException e) {
             System.out.println("❌ Error al eliminar asistencia: " + e.getMessage());
         }
+    }
+
+    public void insertarAsistencia(asistencia a) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'insertarAsistencia'");
     }
 }
 

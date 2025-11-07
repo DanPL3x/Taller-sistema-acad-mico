@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.AdminController" prefWidth="800" prefHeight="600">
+    <top>
+        <HBox spacing="10" style="-fx-padding:10;">
+            <Label text="Panel Administrador" style="-fx-font-size:16px; -fx-font-weight:bold;"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="Cerrar sesión" onAction="#cerrarSesion"/>
+        </HBox>
+    </top>
+    <center>
+        <VBox spacing="10" style="-fx-padding:10;">
+            <Label text="Datos del sistema (ejemplo)"/>
+            <HBox spacing="10">
+                <Button text="Gestionar Estudiantes" onAction="#verEstudiantes"/>
+                <Button text="Gestionar Docentes" onAction="#verDocentes"/>
+                <Button text="Gestionar Cursos" onAction="#verCursos"/>
+            </HBox>
+            <TableView fx:id="tablaDatos" prefHeight="400"/>
+        </VBox>
+    </center>
+</BorderPane>

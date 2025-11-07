@@ -22,7 +22,7 @@ public class MenuEstudianteController {
 
     @FXML
     private void verAsistencias() {
-        ObservableList<asistencia> lista = asistenciaDAO.listarAsistenciasPorCurso(31);
+        ObservableList<asistencia> lista = asistenciaDAO.listarAsistenciasPorCurso();
         tablaEstudiante.setItems(lista);
         System.out.println("📋 Asistencias del estudiante mostradas");
     }

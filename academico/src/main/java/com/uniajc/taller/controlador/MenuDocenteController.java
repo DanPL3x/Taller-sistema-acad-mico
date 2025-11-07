@@ -25,7 +25,7 @@ public class MenuDocenteController {
 
     @FXML
     private void registrarAsistencia() {
-        ObservableList<asistencia> lista = asistenciaDAO.listarAsistenciasPorCurso(31);
+        ObservableList<asistencia> lista = asistenciaDAO.listarAsistenciasPorCurso();
         tablaDocente.setItems(lista);
         System.out.println("🧾 Asistencias mostradas");
     }

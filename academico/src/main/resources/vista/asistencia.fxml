@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.uniajc.taller.controlador.AsistenciaControlador"
+            prefWidth="700" prefHeight="400">
+    <children>
+        <Label text="Gestión de Asistencias" layoutX="250" layoutY="20" 
+               style="-fx-font-size:18px; -fx-font-weight:bold;"/>
+
+        <Label text="ID Estudiante:" layoutX="50" layoutY="80"/>
+        <TextField fx:id="txtEstudianteId" layoutX="160" layoutY="75" prefWidth="150"/>
+
+        <Label text="ID Curso:" layoutX="50" layoutY="120"/>
+        <TextField fx:id="txtCursoId" layoutX="160" layoutY="115" prefWidth="150"/>
+
+        <Label text="Estado:" layoutX="50" layoutY="160"/>
+        <ComboBox fx:id="cbEstado" layoutX="160" layoutY="155" prefWidth="150"/>
+
+        <Button text="Registrar" layoutX="350" layoutY="75" onAction="#registrarAsistencia"/>
+        <Button text="Eliminar" layoutX="350" layoutY="115" onAction="#eliminarAsistencia"/>
+
+        <TableView fx:id="tablaAsistencias" layoutX="50" layoutY="220" prefWidth="600" prefHeight="150">
+            <columns>
+                <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+                <TableColumn fx:id="colEstudiante" text="Estudiante" prefWidth="150"/>
+                <TableColumn fx:id="colCurso" text="Curso" prefWidth="150"/>
+                <TableColumn fx:id="colEstado" text="Estado" prefWidth="150"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

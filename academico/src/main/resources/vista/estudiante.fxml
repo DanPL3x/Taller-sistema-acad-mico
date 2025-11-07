@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.EstudianteController" prefWidth="800" prefHeight="600">
+    <top>
+        <HBox spacing="10" style="-fx-padding:10;">
+            <Label text="Panel Estudiante" style="-fx-font-size:16px; -fx-font-weight:bold;"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="Cerrar sesión" onAction="#cerrarSesion"/>
+        </HBox>
+    </top>
+    <center>
+        <VBox spacing="10" style="-fx-padding:10;">
+            <HBox spacing="10">
+                <Button text="Mis Cursos y Notas" onAction="#verMisCursos"/>
+                <Button text="Asistencias" onAction="#verAsistencias"/>
+            </HBox>
+            <TableView fx:id="tablaDatos" prefHeight="450"/>
+        </VBox>
+    </center>
+</BorderPane>

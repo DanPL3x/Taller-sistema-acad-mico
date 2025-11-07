@@ -1,32 +1,36 @@
 package com.uniajc.taller.modelo;
 
-
 public class curso {
-    private int cursoId;
-    private String nombreCurso;
-    private int periodoAcademicoId;
+    private int id;
+    private String nombre;
     private int docenteId;
-    private String descripcionCurso;
 
-    public curso() {}
-
-    public curso(int cursoId, String nombreCurso, int periodoAcademicoId, int docenteId, String descripcionCurso) {
-        this.cursoId = cursoId;
-        this.nombreCurso = nombreCurso;
-        this.periodoAcademicoId = periodoAcademicoId;
-        this.docenteId = docenteId;
-        this.descripcionCurso = descripcionCurso;
+    public curso(int id, String nombre, int docenteId) {
+        this.id = id; this.nombre = nombre; this.docenteId = docenteId;
     }
 
-    // Getters y Setters
-    public int getCursoId() { return cursoId; }
-    public void setCursoId(int cursoId) { this.cursoId = cursoId; }
-    public String getNombreCurso() { return nombreCurso; }
-    public void setNombreCurso(String nombreCurso) { this.nombreCurso = nombreCurso; }
-    public int getPeriodoAcademicoId() { return periodoAcademicoId; }
-    public void setPeriodoAcademicoId(int periodoAcademicoId) { this.periodoAcademicoId = periodoAcademicoId; }
+    public int getId() { return id; }
+    public String getNombre() { return nombre; }
     public int getDocenteId() { return docenteId; }
-    public void setDocenteId(int docenteId) { this.docenteId = docenteId; }
-    public String getDescripcionCurso() { return descripcionCurso; }
-    public void setDescripcionCurso(String descripcionCurso) { this.descripcionCurso = descripcionCurso; }
+    @Override public String toString() { return id + " - " + nombre; }
+
+    public void setNombreCurso(String nombre2) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setNombreCurso'");
+    }
+
+    public void setDescripcionCurso(String desc) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setDescripcionCurso'");
+    }
+
+    public int getPeriodoAcademicoId() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getPeriodoAcademicoId'");
+    }
+
+    public String getDescripcionCurso() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getDescripcionCurso'");
+    }
 }

@@ -12,13 +12,13 @@ public class docenteDAO {
         try (Connection conn = Conexion.getConexion();
              PreparedStatement ps = conn.prepareStatement(sql)) {
 
-            ps.setString(1, d.getNombreDocente());
+            ps.setString(1, d.getNombre());
             ps.setString(2, d.getIdentificacion());
-            ps.setString(3, d.getTipoIdentificacion());
+            ps.setString(3, d.getIdentificacion());
             ps.setString(4, d.getGenero());
             ps.setString(5, d.getCorreo());
             ps.setString(6, d.getTituloEstudios());
-            ps.setString(7, d.getIdiomas());
+            ps.setLong(7, d.getId());
             ps.setString(8, d.getCertificaciones());
             ps.executeUpdate();
 
@@ -37,14 +37,7 @@ public class docenteDAO {
             while (rs.next()) {
                 lista.add(new docente(
                         rs.getInt("docente_id"),
-                        rs.getString("nombre_docente"),
-                        rs.getString("identificacion"),
-                        rs.getString("tipo_identificacion"),
-                        rs.getString("genero"),
-                        rs.getString("correo"),
-                        rs.getString("titulo_estudios"),
-                        rs.getString("idiomas"),
-                        rs.getString("certificaciones")
+                        rs.getString("nombre_docente")
                 ));
             }
         } catch (SQLException e) {

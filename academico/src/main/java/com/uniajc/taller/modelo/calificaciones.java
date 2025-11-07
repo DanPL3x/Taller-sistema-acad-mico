@@ -30,4 +30,9 @@ public class calificaciones {
     public void setNota(double nota) { this.nota = nota; }
     public String getComentariosCalificacion() { return comentariosCalificacion; }
     public void setComentariosCalificacion(String comentariosCalificacion) { this.comentariosCalificacion = comentariosCalificacion; }
+
+    public void setComponente_evaluacion_id(int compId) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setComponente_evaluacion_id'");
+    }
 }
